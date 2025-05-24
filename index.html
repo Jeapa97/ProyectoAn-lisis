@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Análisis Numérico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Proyecto de Análisis Numérico</h1>
+    <nav>
+      <ul id="menu">
+        <li data-target="inicio" class="active">Inicio</li>
+        <li data-target="teoria">Teoría</li>
+        <li data-target="caso1">Caso 1: Integración</li>
+        <li data-target="caso2">Caso 2: Derivadas</li>
+        <li data-target="recursos">Recursos</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="content-section">
+      <h2 style= "text-align: center;"><strong>Diferenciación e integración numérica</strong></h2>
+
+      <img src="img/7.jpeg" alt="Diferenciación e integración numérica" style="display: block; margin: 15px auto; max-width: 50%;">
+      
+      <p>Son técnicas utilizadas en análisis numérico que nos permiten la aproximación de las integrales y derivadas cuando tenemos funciones complejas y no son posibles obtenerlas de forma analítica.</p>
+
+      <p>Son utilices para: </p>
+      
+      <ul>
+        <li>Cuando las funciones no poseen una derivada o integral explícita.</li>
+        <li>Se trabaja con datos experimentales en lugar de funciones definida.</li>
+      </ul>
+
+       <h2 style= "text-align: center;"><strong>Importancia en la ingeniería.</strong></h2>
+
+      <p>La diferenciación e integración numérica son como aliados indispensables en el mundo de la ingeniería. Nos ayudan a resolver problemas del día a día cuando las soluciones exactas son inalcanzables o demasiado complejas de calcular. Además, su aplicación no solo hace que los resultados sean más precisos, sino que también ayuda a tomar decisiones bien fundamentadas en proyectos de ingeniería complejos.</p>
+
+       <img src="img/15.jpeg" alt="Importancia en la ingeniería" style="display: block; margin: 15px auto; max-width: 50%;">
+      
+    </section>
+    
+
+    <section id="teoria" class="content-section" style="display:none;">
+
+      <h2 style= "text-align: center;"><strong>Derivadas Finitas</strong></h2>
+      
+      <p>
+        La diferenciación numérica es una técnica que nos ayuda a estimar la derivada de una función de una manera más práctica y tangible. En vez de trabajar con símbolos y ecuaciones complejas, como se hace en el cálculo tradicional, utilizamos fórmulas que se basan en las diferencias entre puntos que están muy cerca uno del otro.
+      </p>
+      
+      <img src="img/13.jpeg" alt="Gráfica Diferenciación númerica" style="display: block; margin: 15px auto; max-width: 30%;">
+
+      <p>
+        Puede calcularse usando la fórmula de definición de derivada: 
+      <p>
+        
+      <img src="img/9.png" alt="Formúla de derivas" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>
+        Donde h, representa el tamaño del paso o la distancia entre dos puntos en el eje x. Determina que tan cerca están los puntos usados para calcular la derivada.
+      <p>
+
+        <ul>
+          <li>Si <strong>h</strong> es muy grande puede producir un valor muy inexacto</li>
+          <li>Si <strong>h</strong> es muy pequeño mejora la precisión, se puede decir que, h debe ser suficientemente pequeño para capturar cambios, pero no tan pequeño porque puede generar errores computaciones.</li>
+        </ul>
+
+      <p>
+        Existen distintos esquemas: hacia adelante, hacia atrás y centrado. Cada uno tiene ventajas dependiendo de si estamos en el borde de un conjunto de datos o en el interior.
+      </p>
+
+      <p>
+        <strong>Fórmulas para derivada de primer orden:</strong>
+      </p>
+
+      <img src="img/8.jpeg" alt="Derivadas de primer orden" style="display: block; margin: 15px auto; max-width: 50%;">
+
+       <h3><strong>Derivada Hacia Adelante</strong></h3>
+
+       <p>
+         Se utiliza cuando tienes datos del punto actual y del siguiente, es útil a inicio de un conjunto de datos. Tiene menor precisión que la derivada centrada. 
+      </p>        
+      
+      <img src="img/10.jpeg" alt="Derivada Hacia Adelante" style="display: block; margin: 15px auto; max-width: 50%;">
+
+      <h3><strong>Derivada Hacia Atrás</strong></h3>
+
+      <p>
+        Se utiliza cuando tienes datos del punto actual y del anterior, es útil al final de un conjunto de datos. Tiene menor precisión que la derivada centrada.
+      </p>
+
+      <img src="img/12.jpeg" alt="Derivada Hacia Atrás" style="display: block; margin: 15px auto; max-width: 50%;">
+
+      <h3><strong>Derivada Centrada</strong></h3>
+
+      <p>
+        Se utiliza cuando se tiene datos antes y después del punto de interés, es indispensable para puntos interiores de una tabla de datos. Se considera la más precisa de las tres (menor error
+      </p>
+
+      <img src="img/11.jpeg" alt="Derivada Centrada" style="display: block; margin: 15px auto; max-width: 50%;">  
+
+      <h3><strong>Ejemplo</strong></h3>  
+
+      <p>Estudiamos un objeto en caída libre, cuya posición en función del tiempo está dada por la ecuación:</p>
+
+      <img src="img/derivadas/D1.png" alt="Derivada Centrada" style="display: block; margin: 15px auto; max-width: 100%;"> 
+
+      <p>Donde <strong>g</strong> es la velocidad de la gravedad</p>
+
+      <p> Estimar la velocidad del objeto en <strong>𝑡 = 2.0</strong> segundos utilizando tres métodos de derivación numérica con un paso de tiempo <strong>ℎ =0.1</strong> </p>
+
+      <h4><strong>Diferencia hacia adelante</strong></h4>
+
+      <p>Este método estima la derivada en un punto utilizando el valor del punto actual y el siguiente. Se basa en la fórmula:</p>
+
+      <img src="img/derivadas/D2.png" alt="Diferencia hacia adelante" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Aplicando: </p>
+
+      <img src="img/derivadas/D3.png" alt="Diferencia hacia adelante" style="display: block; margin: 15px auto; max-width: 100%;">  
+
+      <h5><strong>Ventajas</strong></h5>
+
+      <ul>
+        <li>Es fácil de implementar.</li>
+        <li>Solo requiere el punto actual y el siguiente.</li>
+      </ul>
+
+      <h5><strong>Desventajas</strong></h5>  
+
+      <ul>
+        <li>Es menos precisa que otros métodos.</li>
+        <li>Puede generar errores si el paso de tiempo es muy grande.</li>
+      </ul>
+
+      <h4><strong>Diferencia hacia atrás</strong></h4>
+
+      <p>Este método usa un punto anterior y uno posterior al punto de interés. Su fórmula es:</p>
+
+      <img src="img/derivadas/D4.png" alt="Diferencia hacia atrás" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Aplicando: </p>  
+
+      <img src="img/derivadas/D5.png" alt="Diferencia hacia atrás" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <h5><strong>Ventajas</strong></h5>  
+
+      <ul>
+        <li>Útil cuando no se tienen datos futuros.</li>
+        <li>Igual de simple que la anterior.</li>
+      </ul>  
+
+      <h5><strong>Desventajas</strong></h5>
+
+      <ul>
+        <li>Es menos precisa que otros métodos.</li>
+        <li>Puede generar errores si el paso de tiempo es muy grande.</li>
+      </ul>
+
+      <h4><strong>Diferencia centrada</strong></h4>
+
+      <p>Este método usa un punto anterior y uno posterior al punto de interés. Su fórmula es:</p>
+
+      <img src="img/derivadas/D6.png" alt="Diferencia centrada" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Aplicando: </p>  
+
+      <img src="img/derivadas/D7.png" alt="Diferencia centrada" style="display: block; margin: 15px auto; max-width: 100%;">  
+
+      <h5><strong>Ventajas</strong></h5>  
+
+      <ul>
+        <li>Es más precisa que los otros métodos.</li>
+        <li>Utiliza datos antes y después del punto de interés.</li>
+      </ul>  
+
+      <h5><strong>Desventajas</strong></h5>
+
+      <ul>
+        <li>Es más compleja de implementar.</li>
+        <li>Requiere más datos.</li>
+      </ul>
+
+      <h4><strong>Interpretación Física y Conclusión</strong></h4>
+
+      <p>La derivada que estamos calculando es una estimación de la velocidad instantánea en un momento específico. En este caso, como la función de posición es exacta, la derivada real en <strong>𝑡 = 2 </strong>es:</p>
+
+      <img src="img/derivadas/D8.png" alt="Diferencia centrada" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Como vemos, el único método que da el valor exacto es la diferencia centrada, lo que confirma que es el método más preciso entre los tres.</p>
+
+
+      <h2 style= "text-align: center;"><strong>Integración Numérica</strong></h2>
+
+      <p>Es un conjunto de métodos usado para calcular una aproximación del valor de una integral definida cuando no es posible resolverla de forma analítica.
+        </p>  
+
+      <img src="img/1.jpeg" alt="Integración Numérica" style="display: block; margin: 15px auto; max-width: 100%;">  
+
+      <p>Se utiliza cuando:</p>
+      
+      <ul>
+        <li>La función no tiene una antiderivada elemental.</li>
+        <li>Solo se tienen datos discretos de la función (por ejemplo, de una tabla o experimento).</li>
+        <li>Se requiere una solución rápida en simulaciones computacionales.</li>
+      </ul>
+
+      <h3><strong>Regla del Trapecio</strong></h3>
+
+      <p>Es una técnica de integración numérica que utiliza una aproximación lineal de la función en cada subintervalo.</p>
+
+      <img src="img/2.jpeg" alt="Regla del Trapecio" style="display: block; margin: 15px auto; max-width: 100%;">  
+
+      <p>Se obtiene calculado el área de un trapecio circunscrito debajo de la función f(x) entre los puntos x0=a y x1=b. En la cual: </p>
+
+      <ul>
+        <li>Función muy engorrosa de integrar.</li>
+        <li>No posee anti-derivada</li>
+      </ul>
+
+      <h4><strong>Ejemplo</strong></h4>
+
+      <p>Para demostrar lo fácil que resulta ser la regla del trapecio en la aproximación del valor de una integral, consideremos las integrales: </p>
+
+      <img src="img/trapecio/t0.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Empezaremos encontrando el valor aproximado para la integral: <p>
+
+        <img src="img/trapecio/t1.1.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+        <p> Donde tenemos que el limite inferior que llamaremos "a" es igual a 0, y el límite súperior que llamaremos "b" es igual a 1. Tendriamos entonces que: </p>
+      
+        <img src="img/trapecio/t1.2.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+        <p> Por tanto: </p>
+
+        <img src="img/trapecio/t2.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+        <p> Ahora, para la integral: </p>
+
+        <img src="img/trapecio/t3.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+        <p> Donde a es igual a 2, y b es igual a 4 obtenemos: </p>
+
+        <img src="img/trapecio/t4.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+        <p> Por tanto: </p>  
+
+        <img src="img/trapecio/t5.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+      
+      <h3><strong>Regla de Simpson</strong></h3> 
+
+      <p>Es una técnica de integración numérica que utiliza una aproximación cuadrática de la función en cada subintervalo.</p>
+
+      <img src="img/3.jpeg" alt="Regla de Simpson" style="display: block; margin: 15px auto; max-width: 100%;">  
+
+      <p>La regla se Simpson se obtiene suponiendo el segundo polinomio de Lagrange. La regla de Simpson presenta con variación de la forma del polinomio la regla de Simpson 1/3 y 3/8. El primero se halla reemplazando en la formula anterior un polinomio de grado 2 y el segundo un polinomio de interpolación de grado 3. </p>  
+
+      <img src="img/4.jpeg" alt="Regla de Simpson" style="display: block; margin: 15px auto; max-width: 100%;"> 
+
+      <h4><strong>Ejemplo</strong></h4>  
+
+      <p> Aplicar la regla de Simpson para calcular el valor de la integral dada por: </p>  
+
+      <img src="img/simpson1/s1.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p> Donde a es igual a -1 y b es igual a 1. Obtenemos: </p>
+
+      <img src="img/simpson1/s2.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <img src="img/simpson1/s3.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p> Por tanto: </p>  
+
+      <img src="img/simpson1/s4.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">  
+
+
+      <h3><strong>Regla de Simpson 3/8</strong></h3>
+
+      <img src="img/5.jpeg" alt="Regla de Simpson 3/8" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Es un método de integración numérica que aproxima una integral definida utilizando un polinomio de grado 3 (cúbico) en cada grupo de tres subintervalos consecutivos. Lo cual nos lleva a las siguientes características: </p>
+
+      <ul>
+        <li>Alta precisión para funciones suaves.</li>
+        <li>Aproxima usando polinomios cúbicos.</li>
+        <li>Requiere que el número de subintervalos sea múltiplo de 3.</li>
+      </ul>
+
+      <img src="img/6.jpeg" alt="Regla de Simpson 3/8" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <h4><strong>Ejemplo</strong></h4>  
+
+      <p> Para calcular el valor aproximado de una integral por el método de simpson 3/8 se utiliza las siguientes fórmulas:</p>
+
+      <img src="img/simpson2/s81.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Donde: </p>
+
+      <ul>
+        <li> a = 1 </li>
+        <li> b = 2</li>
+        <li> n = 3</li>
+      </ul>
+
+      <p>Obtemos</p>
+
+      <img src="img/simpson2/s82.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p> Lo que se puede resumir en la siguiente tabla: </p>
+
+      <img src="img/simpson2/s83.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 140%;">
+
+      <p>Reemplazando en la fórmula nos queda que :</p>
+
+      <img src="img/simpson2/s84.jpeg" alt="Ejemplo" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      </section>
+
+    <section id="caso1" class="content-section" style="display:none;">
+
+      <h2 style= "text-align: center;"><strong>Caso 1: Energía por Vibraciones</strong></h2>  
+
+      <img src="img/16.jpeg" alt="Energía por vibraciones" style="display: block; margin: 15px auto; max-width: 100%;">
+      
+      <p>Las vibraciones mecánicas generadas por el tránsito pesado en carreteras representan una fuente constante de perturbación para las edificaciones cercanas. En contextos urbanos y suburbanos, especialmente en zonas donde predominan viviendas construidas sin estudios geotécnicos detallados, la exposición prolongada a estas vibraciones puede producir efectos acumulativos no deseados, tales como micro fisuras, asentamientos diferenciales y degradación estructural progresiva. Este fenómeno ha sido documentado en múltiples estudios de ingeniería civil, donde se reconoce que incluso vibraciones de baja amplitud, si son repetitivas y persistentes, pueden generar daños estructurales relevantes a largo plazo.</p>
+      
+      <p>En Colombia, muchas viviendas ubicadas cerca de vías de alto flujo vehicular no cuentan con mecanismos de aislamiento o refuerzo estructural adecuados, por lo que es fundamental encontrar métodos para evaluar el impacto de estas vibraciones y tomar decisiones basadas en evidencia.</p>
+
+      <h3><strong>Modelado físico de las vibraciones</strong></h3>
+      <p>Para representar matemáticamente la acción vibratoria sobre una estructura, se parte del análisis de la fuerza periódica ejercida por el paso constante de vehículos. Una forma común de modelar esta fuerza es mediante una función sinusoidal del tipo:</p>
+
+      <img src="img/Estudio1/C1.png" alt="Modelo de vibración" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Donde:</p>
+
+      <ul>
+        <li><strong>F₀ </strong>es la amplitud de la fuerza.</li>
+        <li><strong>ω </strong>es la frecuencia angular de las vibraciones.</li>
+        <li><strong>t</strong> es el tiempo.</li>
+      </ul>
+
+      <p>La energía mecánica que esta fuerza transmite a la estructura en un intervalo de tiempo [0,T] se puede estimar a través de la siguiente integral:</p>
+
+      <img src="img/Estudio1/C2.png" alt="Energía mecánica" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Este modelo permite cuantificar la energía acumulada sobre la estructura, la cual se asocia directamente con el nivel de fatiga de los materiales. Mientras mayor sea esta energía, mayor será el daño potencial a la vivienda.</p>
+
+      <h3><strong>Método de integración numérica aplicado al problema</strong></h3>
+
+      <p>Cuando no se dispone de una solución analítica directa, o cuando los datos provienen de mediciones discretas (como ocurre en la realidad con sensores o registros de campo), es necesario utilizar métodos de integración numérica para aproximar el valor de la integral que representa la energía vibracional acumulada.</p>
+
+      <p>En este caso, se puede aplicar la regla del trapecio para aproximar la integral, recordemos que este método es de los más sencillos y eficientes para aproximar integrales definidas cuando:</p>
+
+      <ul>
+        <li>Se dispone de una función evaluable en puntos específicos.</li>
+        <li>Se requiere una solución rápida y con aceptable precisión.</li>
+        <li>Se desea un algoritmo fácil de implementar en lenguaje de programación.</li>
+      </ul>
+
+      <p>Para nuestro caso obtendriamos que: </p>
+
+       <img src="img/Estudio1/C3.png" alt="Método Trapecio" style="display: block; margin: 15px auto; max-width: 100%;">
+
+       <p>Donde:</p>
+
+      <img src="img/Estudio1/C4.png" alt="Valor de h" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <h3><strong>Ejemplo Práctico</strong></h3>
+
+      <p>Un sistema mecánico sometido a vibraciones forzadas es modelado por una fuerza variable en el tiempo dada por la expresión:</p>
+
+      <img src="img/Estudio1/C5.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Donde:</p>
+
+      <ul>
+        <li><strong>F₀ </strong>es la amplitud de la fuerza.</li>
+        <li><strong>ω </strong>es la frecuencia angular de las vibraciones.</li>
+        <li><strong>t</strong> es el tiempo.</li>
+        </ul>
+
+        <p>Se desea calcular <strong>la energía total acumulada</strong> por vibraciones en un intervalo de tiempo de <strong>T = 12</strong> segundos, utilizando el método del trapecio con un paso de tiempo<strong> h=0.5 </strong>segundos.</p>
+
+        <p>Para resolver este problema, debemos dar solución a la siguiente integral definida:</p>  
+
+        <img src="img/Estudio1/C6.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">
+
+        <ul>
+          <li><strong>Reemplazamos los Valores en la integral </strong>.</li>
+
+          <img src="img/Estudio1/C7.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">  
+          
+          <li><strong> Cálculamos el número de subintervalos n</strong></li>
+
+          <img src="img/Estudio1/C8.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">
+          
+          <li><strong> Aplicamos la formúla del trapecio.</strong></li>
+
+          <img src="img/Estudio1/C9.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">
+
+          <p>Donde: </p>
+
+          <img src="img/Estudio1/C10.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">
+
+          <li><strong>Reemplazamos y obtenemos que: </strong></li>
+
+          <img src="img/Estudio1/C11.png" alt="Ejemplo Práctico" style="display: block; margin: 15px auto; max-width: 100%;">
+        
+        </ul>
+
+      <h3><strong>Programa</strong></h3>
+
+      <p> En este apartado puedes ingresar los valores obtenidos en el campo y encontrar la aproximación de la acumulación de energía tanto por el método de trapecio, Simpson 1/3 y Simpson 3/8, teniedno als consideraciones que se describen más adelante</p>
+      
+          <p>Una vez ingreses tus datos, haz clic en <em>“Calcular Energía”</em> para ver el resultado.</p>  
+    
+      <label>F₀ (N): <input type="number" id="F0" value="500"></label>
+      <label>ω (rad/s): <input type="number" id="omega" value="10"></label>
+      <label>T (s): <input type="number" id="T" value="10"></label>
+      <label>h (s): <input type="number" step="0.01" id="h" value="0.1"></label>
+      <button id="btnEnergia">Calcular Energía</button>
+      <pre id="resultado">---</pre>
+
+      <h3><strong>Comparación de Métodos</strong></h3>
+      <table id="tablaComparacion">
+        <thead>
+          <tr>
+            <th>Método</th>
+            <th>Energía (J)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Trapecio</td><td id="energyTrap">–</td></tr>
+          <tr><td>Simpson 1/3</td><td id="energySimp13">–</td></tr>
+          <tr><td>Simpson 3/8</td><td id="energySimp38">–</td></tr>
+        </tbody>
+      </table>
+
+      <p>En la anterior tabla podemos verificar los valores obtenidos por al aplicar los otros métodos. <strong>Debemos recordar que:</strong> <p>
+
+        <ul>
+          <li><strong>Trapecio:</strong> funciona con cualquier número de subintervalos <strong>n=T/h.</strong></li>
+          <li><strong>Simpson 1/3: </strong> requiere que <strong>n sea par.</strong></li>
+          <li><strong>Simpson 3/8: </strong> requiere que <strong>n sea múltipo de 3.</strong></li>
+        </ul>
+      
+        <p>Además n debe ser un número entero. Por lo que si en la tabla no se arroja ningún dato, por favor revise que cumpla con las condiciones anteriores. <p>
+
+           <h3><strong>Aplicaciones e implicaciones prácticas del análisis</strong></h3>
+
+           <p>El uso de estos métodos para calcular la energía acumulada por vibraciones ofrece diversas ventajas:</p>
+
+           <ul>
+             <li><strong>Diagnóstico estructural:</strong> Permite detectar zonas de una edificación que están recibiendo más energía vibracional y, por lo tanto, podrían requerir refuerzo estructural o mantenimiento preventivo.</li>
+             <li><strong>Diseño de soluciones urbanas:</strong> Esta información puede ser utilizada por autoridades locales para justificar la instalación de barreras antivibración, modificaciones en las rutas de tránsito pesado, o incluso reubicación de viviendas en riesgo.</li>
+             <li><strong>Normativas de construcción:</strong> Sirve como base para la creación o ajuste de reglamentos de construcción, especialmente en zonas urbanas densas donde la coexistencia entre viviendas y vías vehiculares es inevitable.</li>
+      <li><strong>Optimización del presupuesto:</strong> Al conocer con precisión qué zonas están más afectadas, se pueden destinar recursos de manera más eficiente, priorizando intervenciones donde realmente se necesita.</li>
+       </ul>
+
+      <h3><strong>Conclusión</strong></h3>
+
+      <p>En conclusión, el uso de métodos de integración numérica para evaluar la energía vibracional sobre edificaciones es una herramienta poderosa que permite relacionar conceptos matemáticos con problemas reales de ingeniería. Esta aproximación no solo mejora la comprensión del fenómeno físico, sino que también permite tomar decisiones informadas en términos de seguridad, mantenimiento y diseño urbano. En el caso colombiano, donde muchas viviendas están ubicadas en condiciones poco ideales, esta metodología puede contribuir significativamente a mejorar la calidad y durabilidad de la infraestructura habitacional. </p>
+
+    </section>
+
+    <section id="caso2" class="content-section" style="display:none;">
+      
+      <h2>Caso 2: Gradiente Hidráulico en Acuíferos</h2>
+
+      <img src="img/derivadas/infoD.jpeg" alt="Gradiente Hidráulico en Acuíferos" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p>Los acuíferos son formaciones geológicas subterráneas capaces de almacenar y transmitir agua. Constituyen una de las principales fuentes de abastecimiento para comunidades rurales y urbanas, sobre todo en regiones donde las fuentes superficiales son escasas o vulnerables. En Colombia, la presión sobre los acuíferos ha aumentado significativamente debido a la sobreexplotación, la contaminación agrícola e industrial y el crecimiento poblacional desorganizado.<p>
+
+        <p>Uno de los riesgos más importantes asociados al mal manejo de acuíferos es la migración de contaminantes, lo cual puede comprometer la calidad del agua subterránea y poner en riesgo la salud pública. Por ello, es fundamental contar con herramientas técnicas que permitan entender cómo se mueve el agua en el subsuelo, con el fin de diseñar estrategias de protección, monitoreo y remediación.<p>
+
+          <h3>Modelado físico del flujo de agua en acuíferos</h3>
+
+          <p>El nivel piezométrico es una medida del potencial hidráulico en un punto del acuífero. En términos prácticos, representa la altura hasta la cual el agua subiría en un tubo piezométrico insertado en el acuífero. Cuando se mide este nivel en varios puntos del terreno, se puede estimar cómo fluye el agua subterránea y en qué dirección.<p>
+           <p>El gradiente hidráulico es una magnitud que indica el cambio del nivel piezométrico con respecto a la distancia. Matemáticamente, se expresa como:</p> 
+
+          <img src="img/Estudio2/E1.png" alt="Gradiente hidráulico" style="display: block; margin: 15px auto; max-width: 100%;">
+
+          <p>Donde:</p>  
+
+        <ul>
+          <li>i es el gradiente hidráulico (adimensional)</li>
+          <li>Δh es la diferencia de nivel piezométrico entre dos puntos (metros).</li>
+          <li>Δx es la distancia entre los dos puntos de medición (m).</li>
+        </ul>
+
+        <p>Este gradiente es un componente clave en la Ley de Darcy, la cual modela el flujo de agua subterránea, y es esencial para calcular caudales, evaluar contaminaciones y diseñar obras hidráulicas como pozos o barreras hidráulicas.</p>
+
+        <h3>Métodos de derivación numérica</h3>
+
+      <p>En muchas ocasiones, los niveles piezométricos se obtienen de forma puntual en varios pozos distribuidos espacialmente, y no se cuenta con una función continua que describa el comportamiento del nivel del agua. Por eso, se utilizan métodos numéricos de derivación que permiten aproximar el gradiente hidráulico a partir de los datos discretos disponibles.<p>
+
+        <p>Los métodos más comunes son:<p>
+
+          <ul>
+            <li>Diferencia hacia adelante (orden 1):</li>
+
+            <img src="img/Estudio2/E2.png" alt="Diferencia hacia adelante" style="display: block; margin: 15px auto; max-width: 100%;">
+
+            <p>Se utiliza en el extremo izquierdo de una serie de puntos.<p>
+            
+            <li>Diferencia hacia atrás (orden 1):</li>
+
+                <img src="img/Estudio2/E3.png" alt="Diferencia hacia atrás" style="display: block; margin: 15px auto; max-width: 100%;">
+
+              <p>Se emplea en el extremo derecho del dominio<p>
+              
+            <li>Diferencia centrada (orden 2):</li>
+
+                <img src="img/Estudio2/E4.png" alt="Diferencia centrada" style="display: block; margin: 15px auto; max-width: 100%;">
+
+              <p>Brinda una mejor aproximación, especialmente en puntos interiores.<p>
+  
+          </ul>
+
+      <p>Cada uno de estos métodos tiene su campo de aplicación, dependiendo de la ubicación del punto de análisis dentro del dominio. Por ejemplo, el método centrado es más preciso pero solo puede usarse cuando se tienen datos a ambos lados del punto evaluado.</p>
+
+      <h3>Estimación del Gradiente Hidráulico</h3>
+        <p>
+          En este estudio de caso vas a calcular la <strong>pendiente</strong> (gradiente hidráulico) del
+          nivel freático de un acuífero, a partir de mediciones de nivel piezométrico en pozos.
+        </p>
+        <p><strong>¿Por qué?</strong> El gradiente hidráulico determina la velocidad y dirección del flujo subterráneo.
+          Con él puedes diseñar pozos de extracción y barreras de contención, y proteger el suministro de agua.</p>
+        <p><strong>¿Qué datos debes ingresar?</strong><br>
+          Una serie de pares de valores separados por comas y por línea, por ejemplo:
+        </p>
+        <pre>
+      x₀, h₀
+      x₁, h₁
+      x₂, h₂
+      …
+        </pre>
+        <p>
+          donde <code>xᵢ</code> es la distancia (m) entre pozos (por ejemplo, 0, 50, 100…) y
+          <code>hᵢ</code> es el nivel piezométrico (m sobre el nivel del mar) medido en cada pozo.
+        </p>
+        <p><strong>Métodos que aplicamos:</strong></p>
+        <ul>
+          <li><strong>Adelante</strong> en el primer punto</li>
+          <li><strong>Atrás</strong> en el último punto</li>
+          <li><strong>Centrado</strong> en los puntos intermedios</li>
+        </ul>
+
+      <h3><strong>Ejemplo Práctico</strong></h3>
+
+      <img src="img/derivadas/D22.jpeg" alt="Imagen De Referencia" style="display: block; margin: 15px auto; max-width: 20%;">
+       
+        <p>En una zona costera, se instalan cinco pozos a lo largo de una línea recta perpendicular a la costa para monitorear el nivel freático. Las distancias desde el primer pozo son <strong>x = [0, 50, 100, 150, 200] metros.</strong><p> Los niveles piezométricos medidos en metros sobre el nivel del mar son <strong><p> h = [12.5, 12.2, 11.8, 11.4, 11.1] metros.</strong><p>
+
+          <p> Se debe calcular el gradiente hidráulico, es decir, la derivada de h respecto a x en cada punto utilizando diferenciación numérica. <p>
+
+            <h4><strong>Datos Del Problema</strong></h4>
+
+            <img src="img/derivadas/D9.png" alt="Datos Del Problema" style="display: block; margin: 15px auto; max-width: 100%;">
+
+            <ul>
+              <li><strong>Gradiente hidráulico pozo 1 (x = 0 m)</strong> Aplicamos diferencia hacia adelante</li>
+
+              <img src="img/derivadas/D10.png" alt="Gradiente hidráulico pozo 1" style="display: block; margin: 15px auto; max-width: 100%;">
+
+              <p> Para este caso no es aplicable diferencia hacia atrás y centrada ya que no tenemos información de un punto hacia atrás <p>
+
+              <li><strong>Gradiente hidráulico pozo 2 (x = 50 m)</strong> Aplicamos diferencia hacia adelante, centrada y hacia atrás</li>
+
+                <ul>
+                  <li><strong>Diferencia hacia Adelante</strong></li>
+
+                  <img src="img/derivadas/D11.png" alt="Gradiente hidráulico pozo 2" style="display: block; margin: 15px auto; max-width: 100%;">
+                  
+                  <li><strong>Diferencia Centrada</strong> </li>
+
+                  <img src="img/derivadas/D12.png" alt="Gradiente hidráulico pozo 2" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                  <li><strong>Diferencia hacia Atrás</strong></li>
+
+                  <img src="img/derivadas/D13.png" alt="Gradiente hidráulico pozo 2" style="display: block; margin: 15px auto; max-width: 100%;">
+                  
+                </ul>
+
+                <li><strong>Gradiente hidráulico pozo 3 (x = 100 m)</strong> Aplicamos diferencia hacia adelante, centrada y hacia atrás</li>
+
+              <ul>
+                <li><strong>Diferencia hacia Adelante</strong></li>
+
+                <img src="img/derivadas/D14.png" alt="Gradiente hidráulico pozo 3" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                <li><strong>Diferencia Centrada</strong></li>
+
+                <img src="img/derivadas/D15.png" alt="Gradiente hidráulico pozo 3" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                <li><strong>Diferencia hacia Atrás</strong></li>
+
+                <img src="img/derivadas/D16.png" alt="Gradiente hidráulico pozo 3" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                 </ul>
+
+                 <li><strong>Gradiente hidráulico pozo 4 (x = 150 m)</strong> Aplicamos diferencia hacia adelante, centrada y hacia atrás</li>
+
+               <ul>
+                 <li><strong>Diferencia hacia Adelante</strong></li>
+
+                 <img src="img/derivadas/D17.png" alt="Gradiente hidráulico pozo 4" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                 <li><strong>Diferencia Centrada</strong></li>
+
+                 <img src="img/derivadas/D18.png" alt="Gradiente hidráulico pozo 4" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                 <li><strong>Diferencia hacia Atrás</strong></li>
+
+                 <img src="img/derivadas/D19.png" alt="Gradiente hidráulico pozo 4" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                 </ul>
+
+                <li><strong>Gradiente hidráulico pozo 5 (x = 200 m)</strong> Aplicamos diferencia hacia atrás</li>
+
+                <img src="img/derivadas/D20.png" alt="Gradiente hidráulico pozo 5" style="display: block; margin: 15px auto; max-width: 100%;">
+
+                  <p> Para este caso no es aplicable diferencia hacia adelante y centrada ya que no tenemos información de un punto hacia adelante <p>   
+                  
+            </ul>
+
+            <h4><strong>Gráfica de Resultados</strong></h4>
+
+            <img src="img/derivadas/D21.jpeg" alt="Gráfica de Resultados" style="display: block; margin: 15px auto; max-width: 30%;">
+
+            <p>En la gráfica anterior podemos observar que el gradiente hidráulico es mayor en los primeros pozos, lo que indica que el agua está fluyendo más rápidamente hacia la costa. Esto puede ser una señal de que el acuífero está siendo sobreexplotado o contaminado, y que se necesitan medidas de protección para asegurar un suministro de agua seguro y sostenible.<p>
+
+            <h3><strong>Programa</strong></h3>
+      
+        <p>En este apartado puedes ingresar los datos obtenidos en el campo y calcular el gradiente hidráulico en cada pozo.</p>
+      
+        <p>Una vez ingreses tus datos, haz clic en <em>“Calcular Gradientes”</em> para ver el resultado.</p>
+
+      <p>Ingresa datos en formato x,h por línea:</p>
+      <textarea id="datos" rows="6" placeholder="0,120.0
+50,119.2
+100,118.5
+150,118.1
+200,117.9"></textarea>
+      <button id="btnGradiente">Calcular Gradientes</button>
+      <table id="tablaGradientes">
+        <tr><th>x (m)</th><th>h (m)</th><th>Hacia Adelante</th><th>Hacia Atrás</th><th>Centrada</th></tr>
+      </table>
+
+      <h3>¿Y ahora qué?</h3>
+      <p>
+        Una vez que has obtenido los gradientes hidráulicos en cada pozo, puedes:
+      </p>
+      <ul>
+        <li>
+          <strong>Verificar el diseño de pozos de extracción:</strong><br>
+          Si los gradientes son muy altos (pendientes pronunciadas), el flujo subterráneo será más rápido, y quizá necesites <em>acercar</em> los pozos para captar todo el caudal antes de que el agua contaminada se desplace más allá de tu campo de pozos.
+        </li>
+        <li>
+          <strong>Ajustar la orientación de barreras de contención:</strong><br>
+          Las barreras (muros cortafuego o zanjas impermeables) deben colocarse perpendiculares a la dirección de mayor gradiente para interceptar eficazmente el flujo subterráneo.
+        </li>
+        <li>
+          <strong>Dimensionar tiempos de reacción y monitoreo:</strong><br>
+          Conociendo la pendiente y aplicando la ley de Darcy (v = −K·i), estimas la velocidad del agua y defines <em>cada cuánto tiempo</em> debes tomar muestras en pozos de vigilancia para detectar contaminantes.
+        </li>
+        <li>
+          <strong>Validar cumplimiento normativo:</strong><br>
+          Algunos reglamentos establecen gradientes máximos permitidos para proteger acuíferos vulnerables; con tus valores, compruebas si el diseño actual cumple o requiere refuerzos.
+        </li>
+      </ul>
+      <p>
+        En definitiva, estos gradientes no solo describen el perfil del acuífero, sino que guían <em>todas</em> las decisiones de ingeniería: ubicación y separación de pozos, diseño de barreras y estrategias de monitoreo para garantizar un suministro de agua seguro y sostenible.
+      </p>
+
+      <h3><strong>Importancia del análisis numérico en el estudio de acuíferos</strong></h3>
+      
+      <p>Los métodos numéricos de derivadas finitas permiten trabajar con datos reales tomados de campo sin necesidad de recurrir a modelos complejos. Su aplicación es especialmente útil cuando se cuenta con pocos datos, como ocurre comúnmente en proyectos de ingeniería ambiental o hidrogeología. Además, estas herramientas facilitan la simulación del comportamiento del acuífero ante distintas condiciones, lo que resulta clave para una gestión sostenible de los recursos hídricos subterráneos.</p>
+
+      <p>En contextos rurales colombianos, donde los acuíferos son la principal fuente de agua, contar con técnicas como esta puede marcar la diferencia entre un abastecimiento seguro o un riesgo sanitario.</p>
+      
+      <h3><strong>Conclusión</strong></h3>
+
+      <p>El uso de derivadas finitas para estimar el gradiente hidráulico es una herramienta sencilla, pero poderosa, que permite entender cómo se mueve el agua en el subsuelo a partir de datos de campo. Su aplicación es clave para evaluar riesgos, planificar intervenciones y diseñar soluciones sostenibles frente a la contaminación y sobreexplotación de acuíferos. Este enfoque demuestra cómo la matemática aplicada, específicamente el análisis numérico, puede convertirse en un aliado fundamental en la protección del agua y el bienestar de las comunidades.</p>
+      
+
+      
+    </section>
+
+    <section id="recursos" class="content-section" style="display:none;">
+      
+      <h2><strong>Tablas Comparativas de los diferentes métodos</strong></h2>
+
+      <img src="img/Recursos/R1.png" alt="Tablas Comparativas" style="display: block; margin: 15px auto; max-width: 100%;">
+
+      <p><p>
+        
+      <img src="img/Recursos/R2.png" alt="Tablas Comparativas" style="display: block; margin: 15px auto; max-width: 60%;">
+
+        <p><p>
+          
+      <h2><strong>Vídeos explicativos de los estudios de caso</strong></h2>
+
+          <h3><strong>Caso 1</strong></h3>
+          
+          </a>
+      <li><a href="https://www.youtube.com/watch?v=zJzJCCeEelw&ab_channel=JeanCarlosAraujoPayares" target="_blank">
+        Estudio De Caso 1 - Video 
+      </a></li>
+      
+          <h3><strong>Caso 2</strong></h3>
+          
+          </a>
+      <li><a href="https://www.youtube.com/watch?v=nTaQwDg2ElA&ab_channel=Mar%C3%ADaMendoza.31" target="_blank">
+        Estudio De Caso 2 - Video 
+      </a></li>
+          
+
+          <h2><strong>Referencias</strong></h2>
+
+          <ul>
+            <li><a href="https://digitk.areandina.edu.co/server/api/core/bitstreams/8eeaf147-e388-472d-b0fc-2ada0e09e3df/content" target="_blank">
+              Areandina - Análisis numéricos
+            </a></li>
+            <li><a href="https://www.freecodecamp.org/espanol/news/la-regla-de-simpson-la-formula-y-como-funciona/" target="_blank">
+              Freecode - ReglaDeSimpson 
+            </a></li>
+            <li><a href="https://cooperativo.liti.digym.upm.es/2024/12/09/integracion-numerica-de-tipo-interpolatorio-en-r/" target="_blank">
+              TrabajoColaborativo - Integración Númerica 
+              <li><a href="https://drive.google.com/file/d/10qimvTUiOm2bXgaJm8iDflDc3p1il_4_/view" target="_blank">
+                PDF - Regla Del Trapecio 
+                 </a></li>
+              <li><a href="https://drive.google.com/file/d/1Y4X_IKlbfZG8QYlfRRdywVXOfyGyGUtI/view" target="_blank">
+                Drive - Diferenciación e Integración Numérica 
+                 </a></li>
+
+          </ul>
+      
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
